@@ -24,14 +24,14 @@ const FeaturesData = [
   },
 ];
 
-const Journal = () => {
+const Contact = () => {
   const handleCardClick = (link) => {
     window.location.href = link;
   };
 
   return (
     <>
-      <div id="CONTACTO" className="container py-14 sm:min-h-[600px]">
+      <div id="contactos" className="container py-14 sm:min-h-[600px]">
         <div>
           <h1
             className="text-3xl font-semibold text-center sm:text-4xl mb-12 bg-clip-text text-transparent bg-gradient-to-r from-secundary to-primary"
@@ -58,4 +58,4 @@ const Journal = () => {
   );
 };
 
-export default Journal;
+export default Contact;

@@ -32,10 +32,10 @@ const ExploreData = [
   },
 ];
 
-const Explore = () => {
+const Who = () => {
   return (
     <>
-      <section className="container" id="explore">
+      <section  className="container" id="nosotros">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -48,7 +48,7 @@ const Explore = () => {
           Ubicados en Capital Federal, ofrecemos un enfoque personalizado y profesional, adaptándonos a las necesidades de cada cliente. Sabemos que enfrentarse a un accidente puede ser una experiencia estresante, por eso trabajamos con transparencia, eficacia y empatía.
           </p>
         </motion.div>
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
+        <div id= "casos" className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
           {ExploreData.map((data) => (
             <motion.div
             variants={SlideUp()}
@@ -74,4 +74,4 @@ const Explore = () => {
   );
 };
 
-export default Explore;
+export default Who;

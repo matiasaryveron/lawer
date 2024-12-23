@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Hero = () => {
+const Main = () => {
   return (
     <>
-      <section className="min-h-[900px] flex justify-center items-center bg-gradient-to-t from-brandDark from-2% to-transparent to-15% h-full">
+      <section id= "inicio" className="min-h-[900px] flex justify-center items-center bg-gradient-to-t from-brandDark from-2% to-transparent to-15% h-full">
         <div
           className="absolute inset-0 bg-gradient-radial from-transparent via-black/50 to-black z-10"
           style={{
@@ -28,4 +28,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Main;

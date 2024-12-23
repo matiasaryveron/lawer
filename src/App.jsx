@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
+import Main from "./components/Main/Main";
 import HeroImg from "./assets/hero.jpg";
-import Explore from "./components/Explore/Explore";
-import Journal from "./components/Journal/Journal";
+import Who from "./components/Who/Who";
+import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import FloatingButtons from "./components/FloatingButtons/FloatingButtons";
 
 const bgImage = {
   backgroundImage: `url(${HeroImg})`,
@@ -16,13 +17,18 @@ const bgImage = {
 const App = () => {
   return (
     <div className="overflow-x-hidden bg-brandDark text-white">
-      <div style={bgImage}>
+      <div style={bgImage} id="inicio">
         <Navbar />
-        <Hero />
+        <Main />
       </div>
-      <Explore />
-      <Journal />
+      <section id="nosotros">
+        <Who />
+      </section>
+      <section id="contactos">
+        <Contact />
+      </section>
       <Footer />
+      <FloatingButtons />
     </div>
   );
 };
