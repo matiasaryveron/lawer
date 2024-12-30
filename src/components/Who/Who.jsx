@@ -9,7 +9,7 @@ const ExploreData = [
   {
     id: 1,
     title: "Accidentes Laborales",
-    place: "Asesoramiento de ART",
+    place: "Reclamos ante la A.R.T.",
     url: "#",
     image: Img1,
     delay: 0.2,
@@ -48,27 +48,32 @@ const Who = () => {
           Ubicados en Capital Federal, ofrecemos un enfoque personalizado y profesional, adaptándonos a las necesidades de cada cliente. Sabemos que enfrentarse a un accidente puede ser una experiencia estresante, por eso trabajamos con transparencia, eficacia y empatía.
           </p>
         </motion.div>
-        <div id= "casos" className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
-          {ExploreData.map((data) => (
-            <motion.div
-            variants={SlideUp()}
-            initial = "hidden"
-            animate = "visible"
-            key={data.id} className="relative">
-              <img
-                src={data.image}
-                alt={data.title}
-                className="w-[350px] h-[550px] object-cover"
-              />
-              <div className="absolute w-full bottom-0 inset-0 bg-brandDark/15">
-                <div className="h-full space-y-1 py-6 flex flex-col justify-end items-center">
-                  <h3 className="text-2xl font-semibold">{data.title}</h3>
-                  <h3 className="uppercase">{data.place}</h3>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div id="casos" className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center bg">
+  {ExploreData.map((data) => (
+    <motion.div
+      variants={SlideUp()}
+      initial="hidden"
+      animate="visible"
+      key={data.id}
+      className="relative"
+    >
+      <img
+        src={data.image}
+        alt={data.title}
+        className="w-[350px] h-[550px] object-cover"
+      />
+      <div className="absolute w-full bottom-0 inset-0 bg-brandDark/15">
+        <div className="h-full space-y-1 py-6 flex flex-col justify-end items-center">
+          {/* Nuevo fondo detrás del título y descripción */}
+          <div className="bg-gray-800 bg-opacity-75 px-4 py-2 rounded-md">
+            <h3 className="text-2xl font-semibold text-white">{data.title}</h3>
+            <h3 className="uppercase text-white">{data.place}</h3>
+          </div>
         </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
       </section>
     </>
   );
